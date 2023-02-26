@@ -14,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
     如果 jdk > 8, 运行时请添加 --add-opens java.base/java.lang=ALL-UNNAMED
  */
 @SpringBootApplication
-public class A08 {
+public class  A08 {
     public static void main(String[] args) {
         SpringApplication.run(A08.class, args);
         /*

@@ -22,11 +22,11 @@ public class JdkProxyDemo {
 
         ClassLoader loader = JdkProxyDemo.class.getClassLoader(); // 用来加载在运行期间动态生成的字节码
         Foo proxy = (Foo) Proxy.newProxyInstance(loader, new Class[]{Foo.class}, (p, method, args) -> {
-            System.out.println("before...");
+            System.out.println("before..."); // 前置增强
             // 目标.方法(参数)
             // 方法.invoke(目标, 参数);
             Object result = method.invoke(target, args);
-            System.out.println("after....");
+            System.out.println("after...."); // 后置增强
             return result; // 让代理也返回目标方法执行的结果
         });
 

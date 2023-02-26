@@ -27,12 +27,11 @@ public class MyController {
     @GetMapping(value = "/test", produces = "text/html")
     public String test(HttpServletRequest request, HttpSession session) {
         ServletContext sc = request.getServletContext();
-        String sb = "<ul>" +
+        return "<ul>" +
                     "<li>" + "request scope:" + beanForRequest + "</li>" +
                     "<li>" + "session scope:" + beanForSession + "</li>" +
                     "<li>" + "application scope:" + beanForApplication + "</li>" +
                     "</ul>";
-        return sb;
     }
 
 }

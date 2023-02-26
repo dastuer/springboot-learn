@@ -10,7 +10,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 /*
     注意几点
     1. 版本选择了 java 8, 因为目前的 aspectj-maven-plugin 1.14.0 最高只支持到 java 16
-    2. 运行时需要在 VM options 里加入 -javaagent:C:/Users/manyh/.m2/repository/org/aspectj/aspectjweaver/1.9.7/aspectjweaver-1.9.7.jar
+    2. 运行时需要在 VM options 里加入
+     -javaagent: /home/huah/.m2/repository/org/aspectj/aspectjweaver/1.9.7/aspectjweaver-1.9.7.jar
         把其中 C:/Users/manyh/.m2/repository 改为你自己 maven 仓库起始地址
  */
 @SpringBootApplication

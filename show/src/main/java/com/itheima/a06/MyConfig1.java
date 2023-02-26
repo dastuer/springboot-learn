@@ -27,9 +27,7 @@ public class MyConfig1 {
 
     @Bean //  beanFactory 后处理器
     public BeanFactoryPostProcessor processor1() {
-        return beanFactory -> {
-            log.debug("执行 processor1");
-        };
+        return beanFactory -> log.debug("执行 processor1");
     }
 
 }
